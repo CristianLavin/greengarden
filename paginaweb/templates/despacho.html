@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Formulario de despacho</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="formulario">
+        <h1>Formulario de despacho</h1>
+        <form method="post" action="confirmacion2.html">
+            {% csrf_token %}
+            <div class="username">
+                <input type="text" name="direccion" id="id_direccion" required>
+                <label for="id_direccion">Direccion</label>
+            </div>
+            <div class="username">
+                <input type="text" name="comuna" id="id_comuna" required>
+                <label for="id_comuna">Comuna</label>
+            </div>
+            <div class="username">
+                <input type="number" name="codigo_postal" id="id_codigo_postal" required>
+                <label for="id_codigo_postal">Codigo postal</label>
+            </div>
+            <div class="username">
+                <input type="text" name="region" id="id_region" required>
+                <label for="id_region">Region</label>
+            </div>             
+            <input type="submit" value="Agregar">
+            <div class="registrarse">
+                Ya tienes un despacho agregado, puedes volver a la seccion de pagos <a href="#">aqui</a>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

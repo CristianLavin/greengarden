@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Confirmacion de despacho</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="formulario">
+        <h1>Confirmacion de despacho</h1>
+        <form method="post" action="index2.html">
+            {% csrf_token %}
+            <div class="registrarse">
+                "Nos complace informarte que tu pedido está siendo procesado y será enviado en breve. Nuestro equipo se encargará de empacar tus artículos con cuidado para garantizar que lleguen en perfectas condiciones."
+            <div>
+                <br>
+            </div>    
+           <input type="submit" value="Aceptar">
+            </div> 
+        </form>
+
+    </div>
+</body>
+</html>
